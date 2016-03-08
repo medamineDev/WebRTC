@@ -1,0 +1,11 @@
+/vendor
+/node_modules
+/nodejs/node_modules
+.idea/workspace.xml
+.idea/encodings.xml
+Homestead.yaml
+Homestead.json
+.env
+.idea/
+
+storage/
