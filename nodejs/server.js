@@ -21,49 +21,6 @@ app.all('/*', function (req, res, next) {
 });
 
 
-/*io.on('connection', function (socket) {
-
-
- console.log("new client connected");
-
- var redisClient = redis.createClient();
- redisClient.subscribe('message');
-
- redisClient.on("message2", function(channel, message) {
- //console.log("mew message  --->  "+ message.msg + " ---> to---->"+message.to);
-
- var packet = JSON.parse(message);
-
- console.log("mew message  from --->  "+ packet.from+"  --> to --> "+packet.to+" -----> MSG : "+packet.msg);
-
- io.to('001').emit('message', message);
-
- // socket.emit(channel, message);
-
-
-
- });
-
-
- socket.on('message', function (id, data) {
-
- console.log("socket  id --->" + socket.id);
- console.log("receiver id --->" + id);
- console.log("message--->" + data);
-
-
-
- });
-
-
- socket.on('disconnect', function() {
- redisClient.quit();
- });
-
-
- });*/
-
-
 
 /* run forever
 
@@ -134,9 +91,6 @@ io.sockets.on('connection', function (socket) {
 
         console.log(id_user+" is typing");
 
-        //io.to(3799).emit('message', data);
-
-
         var len = 0;
         for (var i = 0, len = users.length; i < len; ++i) {
             var p = users[i];
@@ -144,7 +98,6 @@ io.sockets.on('connection', function (socket) {
             if (p.id == id_user) {
                 console.log("user found !");
 
-                //io.sockets.socket(p.socket).emit('message', data);
                 io.to(p.socket).emit('is_typing', name);
                 break;
             }

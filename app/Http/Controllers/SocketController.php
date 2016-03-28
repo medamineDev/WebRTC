@@ -50,9 +50,13 @@ class SocketController extends Controller
     {
 
         $users = User::all();
-        return view("writemessage")->with([
+        return view("chatVideo")->with([
             "users" => $users
         ]);
+
+     /*   return view("writemessage")->with([
+            "users" => $users
+        ]);*/
 
         // return view('writemessage');
 
@@ -102,16 +106,7 @@ class SocketController extends Controller
 
         return redirect('writemessage');
 
-        /*
 
-
-                $msg_arr = array("from" => $userName, "to" => "salem", "msg" => "hello Salem");
-
-
-                //$redis->publish('message', Request::input('message'));
-                $redis->publish('message', json_encode($msg_arr));
-
-                return redirect('writemessage');*/
 
     }
 

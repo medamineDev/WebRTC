@@ -25,6 +25,9 @@
     <![endif]-->
 
 
+
+
+
     <link rel="stylesheet" href="{{ URL::asset('libs/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('libs/css/bootstrap-theme.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('libs/css/plugins.css') }}">
@@ -32,6 +35,14 @@
 
     <script src="{{ URL::asset('libs/js/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('libs/js/bootstrap.min.js') }}"></script>
+
+
+
+
+
+
+
+
 
 
     @yield("css")
